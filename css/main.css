@@ -102,30 +102,43 @@ footer {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
+  margin: 0;
 }
-header figure { /* Do we need a special name for figure? */
-
+header {
+  padding: 15px 0;
+}
+header figure { /* Do I need a special name for figure? or perhaps logo? */
+  margin: 50px 0;
+  width: 60%;
 }
 header nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
 }
 header nav ul {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  list-style: none;
 }
 .header-divider {
-
+  width: 100%;
 }
 /*-----Footer Styles ----*/
 
 footer .content-wrapper {
-
+  margin: 50px 0;
+  width: 55%;
 }
 .footer-content {
 
+}
+footer p {
+  margin: 0; 
 }
 .contact {
 
@@ -144,18 +157,31 @@ footer .social-icons p {
 }
 /* ----------------------------------------Mobile First Styles - Homepage ------------------------*/
 
+/* --------- Wondering if I should add main as a display flex because it is defaulting to normalize as display block -----
+main { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-wrapper {
+  DO I NEED A .content-wrapper class on its own?
+}*/
+
 /* Hero Area */
 
 .hero-area {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  margin: 50px 0;
 }
 .hero-area .content-wrapper {
-
 }
-.hero-area .content-wrapper img{
-
+.hero-area h1 {
+width: 90%;
+margin: 50px 0;
+padding-top:55px;
+margin: 0;
 }
 
 /* Aside*/
@@ -167,7 +193,8 @@ aside {
   flex-flow: row wrap;
 }
 aside .content-wrapper {
-
+  margin: 50px 0;
+  width: 90%;
 }
 .from-description {
 
@@ -184,7 +211,11 @@ aside .content-wrapper {
   flex-flow: row wrap;
 }
 .features .content-wrapper {
-
+  margin: 50px 0;
+  width: 90%;
+}
+.features p {  /* Is this a .features p or is it possible to have .features article?*/
+  margin: 0;
 }
 .features .content-wrapper img{
   
@@ -195,8 +226,9 @@ aside .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
 }
-.features .features-items {
-
+.features article {
+  margin: 50px 0;
+  width: 55%;
 }
 
 /* Reviews */
@@ -208,10 +240,14 @@ aside .content-wrapper {
   flex-flow: row wrap;
 }
 .reviews .content-wrapper {
-
+  margin: 50px 0;
+  width: 90%;
 }
 .reviews .content-wrapper article img {
-
+}
+.reviews h3 {
+  margin: 50px 0;
+  width: 55%;
 }
 
 /* ==========================================================================
@@ -246,8 +282,9 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 50px 0;
+  width: 55%;
 }
-
 
 /* ==========================================================================
    Helper classes
