@@ -86,7 +86,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+.content-wrapper {
+    width: 90%;
+    margin: 50px 0;
+  }
 
    /* --------------------------------- Base Header - Footer Styles --------------------------------- */
 header,
@@ -95,18 +98,26 @@ footer {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+   /* margin: 50px 0;*/
 }
 /* ----Header Styles ----*/
-  header .content-wrapper {
+header {
+  padding: 15px 0;
+}
+
+header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
+  /*width: 60%;*/
   margin: 0;
 }
-header {
-  padding: 15px 0;
+
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
 }
 header figure { /* Do I need a special name for figure? or perhaps logo? */
   margin: 50px 0;
@@ -125,10 +136,16 @@ header nav ul {
   width: 100%;
   list-style: none;
 }
-.header-divider {
-  width: 100%;
-}
+
 /*-----Footer Styles ----*/
+
+footer {
+  flex-direction: column;
+}
+
+footer p {
+  margin: 0; 
+}
 
 footer .content-wrapper {
   margin: 50px 0;
@@ -137,11 +154,9 @@ footer .content-wrapper {
 .footer-content {
 
 }
-footer p {
-  margin: 0; 
-}
-.contact {
 
+footer .contact {
+margin-bottom: 50px;
 }
 footer .social-icons {
   display: flex;
@@ -153,7 +168,8 @@ footer .social-icons p {
   justify-content: center;
   align-items: center;
 }
-.copyright {
+footer .copyright {
+  margin:20px 0;
 }
 /* ----------------------------------------Mobile First Styles - Homepage ------------------------*/
 
@@ -163,9 +179,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-.content-wrapper {
-  DO I NEED A .content-wrapper class on its own?
-}*/
+*/
 
 /* Hero Area */
 
@@ -210,15 +224,15 @@ aside .content-wrapper {
   justify-content: center;
   flex-flow: row wrap;
 }
-.features .content-wrapper {
-  margin: 50px 0;
-  width: 90%;
-}
-.features p {  /* Is this a .features p or is it possible to have .features article?*/
-  margin: 0;
+.features h2 {
+  margin-bottom: 60px;
 }
 .features .content-wrapper img{
   
+}
+.features article {
+  margin: 30px 0;
+  width: 60%;
 }
 .features .features-items {
   display: flex;
@@ -226,9 +240,8 @@ aside .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
 }
-.features article {
-  margin: 50px 0;
-  width: 55%;
+.features p {  
+  margin: 0;
 }
 
 /* Reviews */
@@ -236,17 +249,17 @@ aside .content-wrapper {
 .reviews {
   display: flex;
   justify-content: center;
-  align-items: center; /* Why don't we need align-items here?*/
+  /* Why don't we need align-items here?*/
   flex-flow: row wrap;
 }
-.reviews .content-wrapper {
-  margin: 50px 0;
-  width: 90%;
+.reviews h2 {
+  margin-bottom: 40px;
 }
-.reviews .content-wrapper article img {
+
+.reviews article img {
 }
 .reviews h3 {
-  margin: 50px 0;
+  margin: 20px 0;
   width: 55%;
 }
 
@@ -266,6 +279,9 @@ aside .content-wrapper {
   align-items: center;
   flex-flow: row wrap;
 }
+.contact-content p {
+  margin: 0;
+}
 
 /* ==========================================================================
    FAQ Page
@@ -282,8 +298,13 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 50px 0;
-  width: 55%;
+  margin: 50px 0 0 0;
+}
+.faq h2 {
+  margin-bottom: 40px;
+}
+.faq-content {
+  margin-bottom: 50px;
 }
 
 /* ==========================================================================
@@ -374,17 +395,227 @@ aside .content-wrapper {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+   /* -------------------------------TABLET STYLES------------------------------*/
+
+@media only screen and (min-width: 768px) {
+
+.content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+/* Header */
+
+  header {
+  justify-content: space-between;
+  padding: 33px 0;
+  }
+header .content-wrapper {
+  justify-content: space-between;
+  width: 100%;
+  }
+header nav {
+  width: 20%;
+  }
+header nav ul {
+  justify-content: space-between;
+  }
+.header-divider {
+  display:none;
+  }
+
+/* Hero Area */
+
+.hero-area h1 {
+  width: 50%;
+  }
+
+/* Aside */
+
+aside .content-wrapper {
+  display:flex; 
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 50px 0;
+  }
+
+aside .content-wrapper .from-description, 
+aside .content-wrapper .form {
+  width: 40%;
+  margin: 0;
+  }
+
+  /* Features */
+
+.features article {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-flow: column wrap;
+flex-basis: 50%;
+  }
+
+.features .features-item-description {
+  width: 50%;
+  }
+
+/* Reviews */
+
+.reviews article {
+  display: flex;
+  justify-content: space-between;
+  }
+.reviews article div {
+    width: 50%;
+  }
+
+  /* Footer */
+
+footer .content-wrapper {
+  width: 65%;
+  margin: 100px 0;
+  }
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+.footer .contact {
+  margin-bottom: 0;
+  }
+.footer .copyright {
+  width: 100%;
+  }
+/* ==========================================================================
+About Page
+ ========================================================================== */
+ 
+.mission-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  }
+
+.mission-content p {
+    width: 45%;
+  }
+
+.contact-section .content-wrapper h2 {
+    width: 80%;
+  }
+
+.contact-content {
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+/* ==========================================================================
+FAQ Page 
+========================================================================== */
+.faq .content-wrapper {
+  justify-content: space-between;
+  }
+
+.faq-content {
+  flex-basis: 40%;
+  }
+ 
+.faq h2 {
+  width: 100%;
+  }
+} 
+
+/*----------------------------DESKTOP STYLES-----------------------------*/
+
+@media only screen and (min-width: 1200px) {
+header {
+  justify-content: space-between;
+  flex-flow: row wrap;
+  }
+header .content-wrapper {
+    justify-content: center;
+    }
+header nav ul {
+    justify-content: space-between;
+    }
+aside .content-wrapper {
+  display:flex; 
+  justify-content: center;
+  flex-flow: revert;
+  }
+.form {
+  width: 30%;
+  padding-left: 160px; 
+  }
+.features article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%%;
+  }
+.reviews article {
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    flex-flow: row wrap;
+    width: 100%;
+    }
+.reviews h2 {
+  width: 100%;
+  }
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  /* add flex-basis for: .features article and .faq-content*/
+
+/* ==========================================================================
+About Page
+ ========================================================================== */
+ 
+ .mission-content {
+  display:
+  justify-content: space-between;
+  align-items: 
+  }
+
+.mission-content p {
+    width: 
+  }
+
+.contact-section .content-wrapper h2 {
+    width:
+  }
+
+.contact-content {
+    display:
+    justify-content:
+    align-items:
+  }
+
+/* ==========================================================================
+FAQ Page 
+========================================================================== */
+.faq .content-wrapper {
+  justify-content: space-between;
+  }
+
+.faq-content {
+  flex-basis: 40%;
+  }
+ 
+.faq h2 {
+  width: 100%;
+  }
 }
 
-@media (max-width 768px) {
-  /*ADD TABLET MEDIA QUIREY*/
-}
-
-@media (max-width px) {
-  /*ADD DESKTOP MEDIA QUIREY*/
-}
+/* --------------------------------------PRINT STYLES-------------------------*/
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
