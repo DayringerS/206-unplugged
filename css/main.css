@@ -86,7 +86,63 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.content-wrapper {
+/* General Styles */
+ 
+html {
+  font-size: 16px;
+}
+ 
+body {
+  color: #e2e3ed;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background-color: #202322;
+}
+ 
+ul, 
+ol {
+  list-style: none;
+  font-weight: bold; /* check if this should be in the nav for the header only or applied to whole */
+  font-size: 1.125em;
+}
+ 
+a {
+	color: #e2e3ed;
+  text-decoration: none;
+}
+ 
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+}
+ 
+h3, 
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125em;
+}
+ 
+p {
+  font-size: .875em;
+  line-height: 1.4em;
+	
+}
+ 
+img {
+ 
+}
+ 
+figure {
+ 
+}
+ 
+address {
+  font-style:normal;
+  font-size: .875em;
+ 
+}
+
+   .content-wrapper {
     width: 90%;
     margin: 50px 0;
   }
@@ -134,7 +190,6 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  list-style: none;
 }
 
 /*-----Footer Styles ----*/
@@ -170,6 +225,7 @@ footer .social-icons p {
 }
 footer .copyright {
   margin:20px 0;
+  font-size: .875em;
 }
 /* ----------------------------------------Mobile First Styles - Homepage ------------------------*/
 
@@ -196,6 +252,8 @@ width: 90%;
 margin: 50px 0;
 padding-top:55px;
 margin: 0;
+font-size: 2.25em;
+line-height: 1.4em;
 }
 
 /* Aside*/
@@ -205,17 +263,15 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color:#527158;
 }
 aside .content-wrapper {
   margin: 50px 0;
   width: 90%;
 }
-.from-description {
-
-}
-.form {
-
-}
+/* add italic to button style {
+  font-style: italic;
+}*/
 
 /* Features */
 
@@ -251,6 +307,7 @@ aside .content-wrapper {
   justify-content: center;
   /* Why don't we need align-items here?*/
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 .reviews h2 {
   margin-bottom: 40px;
@@ -272,12 +329,14 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color:#527158;
 }
 .contact-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 .contact-content p {
   margin: 0;
@@ -292,6 +351,7 @@ aside .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color:#527158;
 }
 .faq .content-wrapper {
   display: flex;
@@ -623,8 +683,6 @@ footer .content-wrapper {
 .footer .copyright {
   width: 100%;
   }
-  /* add flex-basis for: .features article and .faq-content*/
-
 
 /* ==========================================================================
 About Page
