@@ -136,9 +136,11 @@ p {
  
 img {
  width:100%;
+ border-style:none;
 }
  
 figure {
+  margin: 0;
 }
  
 address {
@@ -159,7 +161,6 @@ footer {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-   /* margin: 50px 0;*/
 }
 /* ----Header Styles ----*/
 header {
@@ -178,12 +179,14 @@ header .content-wrapper {
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
-  /*text-decoration: line-through;*/
+  background: #3a3a3a; 
 }
 header figure { /* Do I need a special name for figure? or perhaps logo? */
-  margin: 50px 0;
   width: 60%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 header nav {
   display: flex;
@@ -191,12 +194,19 @@ header nav {
   align-items: center;
   flex-flow: row wrap;
   width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
+
 }
 header nav ul {
   display: flex;
   justify-content: space-around;
   flex-basis: 100%;
   padding:0;
+}
+header nav ul li {
+  font-size: 1.125em;
 }
 
 /*-----Footer Styles ----*/
@@ -248,17 +258,21 @@ main {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  margin: 50px 0;
+  margin: 0;
   background: url('../img/header-background.jpg') center no-repeat #333;
   background-size: cover;
 }
 .hero-area .content-wrapper {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 0;
 }
 .hero-area h1 {
 width: 90%;
-padding-top:55px;
 margin: 0;
+padding-bottom: 350px;
 font-size: 2.25em;
 line-height: 1.4em;
 font-family: 'Poppins', sans-serif;
@@ -344,10 +358,9 @@ input[type=button] {
 }
 .reviews h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 
-.reviews article img {
-}
 .reviews h3 {
   margin: 20px 0;
   width: 55%;
@@ -494,36 +507,60 @@ input[type=button] {
    /* -------------------------------TABLET STYLES------------------------------*/
 
 @media only screen and (min-width: 768px) {
-
+/*--------General -----------*/
 .content-wrapper {
-    max-width: 640px;
-    margin: 100px 0;
+  max-width: 640px;
+  margin: 100px 0;
+  }
+
+  h2 {
+  font-size: 2.25em;
+  line-height: 1.333;
+  }
+
+  h3 {
+  font-size: 1.5em;
+  line-height: 1.25;
   }
 
 /* Header */
 
 header {
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 33px 0;
   }
 header .content-wrapper {
   justify-content: center;
   width: 100%;
   }
 header nav {
-  width: 20%;
+  width: 30%;
+  justify-content: flex-end;
   }
 header nav ul {
   justify-content: space-between;
+  width: 50%;
+}
+header figure { 
+    margin: 10px 0;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-right: 150px;
   }
-.header-divider {
-  display:none;
+.header-divider { 
+  display:none
   }
 
 /* Hero Area */
 
 .hero-area h1 {
-  width: 50%;
+  padding-top: 100px;
+  text-align: left;
+  padding-right: 160px;
+  width:70%;
   }
 
 /* Aside */
@@ -537,7 +574,7 @@ aside .content-wrapper {
 
 aside .content-wrapper .from-description, 
 aside .content-wrapper .form {
-  width: 40%;
+  width: 50%;
   margin: 0;
   }
 
@@ -561,10 +598,17 @@ flex-basis: 50%;
   display: flex;
   justify-content: space-between;
   }
+.reviews article figure,
 .reviews article div {
-    width: 50%;
-  }
-
+  width: 49%;
+}
+.reviews h2 {
+  width: 85%;
+}
+.reviews h3 {
+  margin: 0;
+  width: 75%;
+}
   /* Footer */
 
 footer .content-wrapper {
@@ -572,10 +616,11 @@ footer .content-wrapper {
   margin: 100px 0;
   }
 
-.footer-content {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   }
 
 .footer .contact {
