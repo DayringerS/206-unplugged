@@ -345,7 +345,10 @@ input[type=button] {
 .features p {  
   margin: 0;
 }
-
+.features i {
+	font-size: 3.75em;
+  margin-bottom: 40px;
+}
 /* Reviews */
 
 .reviews {
@@ -599,7 +602,7 @@ flex-basis: 50%;
   }
 
 .features .features-item-description {
-  width: 50%;
+  width: 60%;
   }
 
 /* Reviews */
@@ -654,20 +657,8 @@ About Page
     width: 45%;
   }
 
-  .map figure {
-    width: 100%;
-    height: 0; 
+.map figure {
     padding-bottom: 75%; 
-    overflow: hidden;
-    position: relative;
-  }
-   
-  .map iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute; 
-    top: 0; 
-    left: 0; 
   }
 
 .contact-section .content-wrapper h2 {
@@ -688,11 +679,15 @@ FAQ Page
   }
 
 .faq-content {
-  flex-basis: 40%;
+  flex-basis: 45%;
   }
  
 .faq h2 {
   width: 100%;
+  }
+.faq h4,.faq p {
+  font-size: .875em;
+  line-height: 1.125;
   }
 } 
 
@@ -801,36 +796,14 @@ footer h4 {
 /* ==========================================================================
 About Page
  ========================================================================== */
- 
- .mission-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 90px;
-  }
-
-.mission-content p {
-  width: 80%
-  }
 
 .mission h2,
   .contact-section .content-wrapper h2 {
-  width: 80%;
+  width: 95%;
+  font-size: 3em;
   }
   .map figure {
-    width: 100%;
-    height: 0; 
-    padding-bottom: 75%; 
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .map iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute; 
-    top: 0; 
-    left: 0; 
+    padding-bottom: 40%; 
   }
 
 .contact-content {
@@ -845,6 +818,12 @@ FAQ Page
 
 .faq h2 {
   width: 100%;
+  font-size: 3em;
+  }
+
+.faq h4,.faq p {
+  font-size: 1.125em;
+  line-height: 1;
   }
 }
 
