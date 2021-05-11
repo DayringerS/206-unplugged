@@ -148,10 +148,9 @@ address {
   font-size: .875em;
  
 }
-
-   .content-wrapper {
-    width: 90%;
-    margin: 50px 0;
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
   }
 
    /* --------------------------------- Base Header - Footer Styles --------------------------------- */
@@ -178,7 +177,7 @@ header .content-wrapper {
 .header-divider {
   width: 100%;
   height: 1px;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 10px 0;
   background: #3a3a3a; 
 }
 header figure { /* Do I need a special name for figure? or perhaps logo? */
@@ -193,7 +192,7 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
+  width: 65%;
   font-size: 1.125em;
   font-weight: 700;
   text-transform: uppercase;
@@ -204,9 +203,13 @@ header nav ul {
   justify-content: space-around;
   flex-basis: 100%;
   padding:0;
+  margin:0;
 }
 header nav ul li {
   font-size: 1.125em;
+  line-height: 1em;
+  margin:0;
+  font-weight: 700;
 }
 
 /*-----Footer Styles ----*/
@@ -251,14 +254,6 @@ footer .copyright {
 }
 /* ----------------------------------------Mobile First Styles - Homepage ------------------------*/
 
-/* --------- Wondering if I should add main as a display flex because it is defaulting to normalize as display block -----
-main { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
-
 /* Hero Area */
 
 .hero-area {
@@ -278,12 +273,13 @@ main {
 }
 .hero-area h1 {
 width: 90%;
-margin: 0;
-padding-bottom: 350px;
+padding-bottom: 320px;
 font-size: 2.25em;
 line-height: 1.4em;
 font-family: 'Poppins', sans-serif;
 font-weight:normal;
+padding-top:50px;
+
 }
 
 /* Aside*/
@@ -296,7 +292,7 @@ aside {
   background-color:#527158;
 }
 aside .content-wrapper {
-  margin: 50px 0;
+  margin: 25px 0 50px 0;
   width: 90%;
 }
 aside .form {
@@ -304,8 +300,9 @@ aside .form {
 }
 input[type=text] {
   box-sizing: border-box;
+  border-style: none;
   width: 100%;
-  color: #2a423a;
+  color: #9d9ea4;
   font-style: italic;
   padding: 1em;
 }
@@ -422,7 +419,6 @@ input[type=button] {
 .faq .content-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
   margin: 50px 0 0 0;
 }
@@ -431,6 +427,7 @@ input[type=button] {
 }
 .faq-content {
   margin-bottom: 50px;
+  width: 337px;
 }
 
 /* ==========================================================================
@@ -527,7 +524,6 @@ input[type=button] {
 /*--------General -----------*/
 .content-wrapper {
   max-width: 640px;
-  margin: 100px 0;
   }
 
   h2 {
@@ -543,16 +539,17 @@ input[type=button] {
 /* Header */
 
 header {
-  justify-content: space-between;
-  padding: 33px 0;
+  justify-content: center;
+
   }
 header .content-wrapper {
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   }
 header nav {
-  width: 30%;
+  width: 20%;
   justify-content: flex-end;
+  font-size:.675em;
   }
 header nav ul {
   justify-content: space-between;
@@ -562,10 +559,9 @@ header figure {
     margin: 10px 0;
     width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-flow: row wrap;
-    padding-right: 150px;
   }
 .header-divider { 
   display:none
@@ -573,27 +569,27 @@ header figure {
 
 /* Hero Area */
 
-.hero-area h1 {
-  padding-top: 100px;
-  text-align: left;
-  padding-right: 160px;
-  width:70%;
-  }
+.hero-area .content-wrapper {
+  justify-content: flex-start;
+}
 
 /* Aside */
 
 aside .content-wrapper {
   display:flex; 
-  justify-content: space-between;
-  flex-flow: revert;
+  justify-content: space-around;
+  flex-flow: row;
   margin: 50px 0;
   }
 
-aside .content-wrapper .from-description, 
-aside .content-wrapper .form {
-  width: 50%;
-  margin: 0;
-  }
+.form-description {
+  width:50%;
+  margin:0;
+}
+aside .form {
+    width: 50%;
+    margin: 0;
+    }
 
   /* Features */
 
@@ -636,7 +632,6 @@ footer .content-wrapper {
 footer .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-direction: row;
   }
 
@@ -679,7 +674,6 @@ About Page
 .contact-content {
     display:flex;
     justify-content: space-between;
-    align-items: flex-start;
   }
 
 /* ==========================================================================
@@ -692,7 +686,7 @@ FAQ Page
 .faq-content {
   flex-basis: 45%;
   }
- 
+
 .faq h2 {
   width: 100%;
   }
@@ -708,7 +702,7 @@ FAQ Page
 /* GENERAL*/
 .content-wrapper {
     max-width: 960px;
-    /*margin: 50px 0;*/
+    margin: 50px 0;
   }
   h2 {
     font-size: 2.25em;
@@ -727,24 +721,35 @@ FAQ Page
 /* Header*/
 
 header {
-  justify-content: space-between;
-  padding: 15px 0;
-  }
+  justify-content: center;
 
-/*header .content-wrapper {
-    justify-content: center;
-    width: 100%;
+  }
+header .content-wrapper {
+  justify-content: space-between;
+  width: 100%;
   }
 header nav {
-    width: 20%;
+  width: 20%;
+  justify-content: flex-end;
+  font-size:.675em;
   }
 header nav ul {
-    justify-content: space-between;
+  justify-content: space-between;
+  width: 50%;
+  flex-basis:50%;
+}
+header figure { 
+    margin: 10px 0;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
   }
 .header-divider {
     display: none;
     }
-*/
+
 /* Hero Area */
 .hero-area h1 {
   font-size: 3.75em;
@@ -755,7 +760,7 @@ header nav ul {
 aside .content-wrapper {
   justify-content: space-around;
   }
-aside .content-wrapper .from-description, 
+aside .content-wrapper .form-description, 
 aside .content-wrapper .form {
   width: 30%;
   margin: 0;
@@ -792,7 +797,6 @@ footer .content-wrapper {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   }
 footer h4 {
   font-size: 1.875em;
@@ -820,7 +824,6 @@ About Page
 .contact-content {
   display:flex;
   justify-content: space-between;
-  align-items: flex-start;
   }
 
 /* ==========================================================================
