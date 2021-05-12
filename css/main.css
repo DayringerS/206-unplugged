@@ -86,24 +86,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* General Styles */
+
+   /* General Styles */
  
 html {
   font-size: 16px;
 }
  
 body {
+  background-color: #202322;
   color: #e2e3ed;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
-  background-color: #202322;
 }
  
 ul, 
 ol {
-  list-style: none;
-  font-weight: bold; /* check if this should be in the nav for the header only or applied to whole */
+  font-weight: bold;
   font-size: 1.125em;
+  list-style: none;
   text-transform: uppercase;
 }
  
@@ -148,19 +149,22 @@ address {
   font-size: .875em;
  
 }
+
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
   }
 
    /* --------------------------------- Base Header - Footer Styles --------------------------------- */
-header,
+
+   header,
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
 }
+
 /* ----Header Styles ----*/
 header {
   padding: 15px 0;
@@ -180,13 +184,15 @@ header .content-wrapper {
   margin: 10px 0 10px 0;
   background: #3a3a3a; 
 }
-header figure { /* Do I need a special name for figure? or perhaps logo? */
+
+header figure { 
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
+
 header nav {
   display: flex;
   justify-content: space-around;
@@ -196,8 +202,8 @@ header nav {
   font-size: 1.125em;
   font-weight: 700;
   text-transform: uppercase;
-
 }
+
 header nav ul {
   display: flex;
   justify-content: space-around;
@@ -205,6 +211,7 @@ header nav ul {
   padding:0;
   margin:0;
 }
+
 header nav ul li {
   font-size: 1.125em;
   line-height: 1em;
@@ -223,18 +230,16 @@ footer p {
   margin: 0; 
 }
 
-footer .content-wrapper {
-  margin: 50px 0;
-  width: 55%;
-}
 footer .contact {
 margin-bottom: 50px;
 }
+
 footer .social-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 footer .social-icons p {
   display: flex;
   justify-content: center;
@@ -244,14 +249,17 @@ footer .social-icons p {
   width: 40px;
   height: 40px;
 }
+
 .social-icons p i {
 	font-size: 1.3125em;
 }
+
 footer .copyright {
-  margin:20px 0;
-  font-size: .875em;
   color:#fff;
+  font-size: .875em;
+  margin:20px 0;
 }
+
 /* ----------------------------------------Mobile First Styles - Homepage ------------------------*/
 
 /* Hero Area */
@@ -264,6 +272,7 @@ footer .copyright {
   background: url('../img/header-background.jpg') center no-repeat #333;
   background-size: cover;
 }
+
 .hero-area .content-wrapper {
   display: flex;
   justify-content: center;
@@ -271,15 +280,14 @@ footer .copyright {
   flex-flow: row wrap;
   margin: 0;
 }
+
 .hero-area h1 {
 width: 90%;
-padding-bottom: 320px;
+padding-bottom: 320px; /* Thinking I could do this a different way*/
 font-size: 2.25em;
 line-height: 1.4em;
 font-family: 'Poppins', sans-serif;
 font-weight:normal;
-padding-top:50px;
-
 }
 
 /* Aside*/
@@ -291,13 +299,16 @@ aside {
   flex-flow: row wrap;
   background-color:#527158;
 }
+
 aside .content-wrapper {
   margin: 25px 0 50px 0;
   width: 90%;
 }
+
 aside .form {
   margin-top: 30px;
 }
+
 input[type=text] {
   box-sizing: border-box;
   border-style: none;
@@ -320,6 +331,7 @@ input[type=button] {
   text-align: center;
   text-transform: uppercase;
 }
+
 /* Features */
 
 .features {
@@ -332,33 +344,38 @@ input[type=button] {
 .features h2 {
   margin-bottom: 60px;
 }
+
 .features article {
   margin: 30px 0;
   width: 60%;
   text-align: center;
 }
+
 .features .features-items {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
+
 .features p {  
   margin: 0;
 }
+
 .features i {
 	font-size: 3.75em;
   margin-bottom: 40px;
 }
+
 /* Reviews */
 
 .reviews {
   display: flex;
   justify-content: center;
-  /* Why don't we need align-items here?*/
   flex-flow: row wrap;
   background-color: #2a423a;
 }
+
 .reviews h2 {
   margin-bottom: 40px;
   line-height: 1;
@@ -380,6 +397,7 @@ input[type=button] {
   flex-flow: row wrap;
   background-color:#527158;
 }
+
 .contact-section {
   display: flex;
   justify-content: center;
@@ -387,9 +405,11 @@ input[type=button] {
   flex-flow: row wrap;
   background-color: #2a423a;
 }
+
 .contact-content p {
   margin: 0;
 }
+
 .map figure {
   width: 100%;
   height: 0; 
@@ -409,6 +429,7 @@ input[type=button] {
 /* ==========================================================================
    FAQ Page
    ========================================================================== */
+
 .faq {
   display: flex;
   justify-content: center;
@@ -416,15 +437,18 @@ input[type=button] {
   flex-flow: row wrap;
   background-color:#527158;
 }
+
 .faq .content-wrapper {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   margin: 50px 0 0 0;
 }
+
 .faq h2 {
   margin-bottom: 40px;
 }
+
 .faq-content {
   margin-bottom: 50px;
   width:100%;
@@ -521,7 +545,9 @@ input[type=button] {
    /* -------------------------------TABLET STYLES------------------------------*/
 
 @media only screen and (min-width: 768px) {
-/*--------General -----------*/
+
+  /*--------General Syles -----------*/
+
 .content-wrapper {
   max-width: 640px;
   }
@@ -540,31 +566,35 @@ input[type=button] {
 
 header {
   justify-content: center;
-
   }
+
 header .content-wrapper {
   justify-content: space-between;
   width: 100%;
   }
+
 header nav {
   width: 20%;
   justify-content: flex-end;
   font-size:.675em;
   }
+
 header nav ul {
   justify-content: space-between;
   width: 50%;
-}
-header figure { 
-    margin: 10px 0;
-    width: 30%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
   }
+
+header figure { 
+  margin: 10px 0;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  }
+
 .header-divider { 
-  display:none
+  display:none;
   }
 
 /* Hero Area */
@@ -577,28 +607,28 @@ header figure {
 
 aside .content-wrapper {
   display:flex; 
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row;
-  margin: 50px 0;
   }
 
 .form-description {
-  width:50%;
+  width:40%;
   margin:0;
-}
+  }
+
 aside .form {
-    width: 50%;
-    margin: 0;
-    }
+  width: 40%;
+  margin: 0;
+  }
 
   /* Features */
 
 .features article {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-flow: column wrap;
-flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  flex-basis: 50%;
   }
 
 .features .features-item-description {
@@ -611,17 +641,21 @@ flex-basis: 50%;
   display: flex;
   justify-content: space-between;
   }
+
 .reviews article figure,
 .reviews article div {
   width: 49%;
-}
+  }
+
 .reviews h2 {
   width: 85%;
-}
+  }
+
 .reviews h3 {
   margin: 0;
   width: 75%;
-}
+  }
+
   /* Footer */
 
 footer .content-wrapper {
@@ -638,16 +672,20 @@ footer .footer-content {
 .footer .contact {
   margin-bottom: 0;
   }
+
 footer p {
   line-height: 1.285;
   }
+
 footer .social-icons {
   width: 12.5em;
   justify-content: space-between;
   }
+
 .footer .copyright {
   width: 100%;
   }
+
 /* ==========================================================================
 About Page
  ========================================================================== */
@@ -660,20 +698,20 @@ About Page
   }
 
 .mission-content p {
-    width: 45%;
+  width: 45%;
   }
 
 .map figure {
-    padding-bottom: 75%; 
+  padding-bottom: 75%; 
   }
 
 .contact-section .content-wrapper h2 {
-    width: 80%;
+  width: 80%;
   }
 
 .contact-content {
-    display:flex;
-    justify-content: space-between;
+  display:flex;
+  justify-content: space-between;
   }
 
 /* ==========================================================================
@@ -690,6 +728,7 @@ FAQ Page
 .faq h2 {
   width: 100%;
   }
+
 .faq h4,.faq p {
   font-size: .875em;
   line-height: 1.125;
@@ -699,66 +738,76 @@ FAQ Page
 /*----------------------------DESKTOP STYLES-----------------------------*/
 
 @media only screen and (min-width: 1200px) {
+
 /* GENERAL*/
+
 .content-wrapper {
-    max-width: 960px;
-    margin: 50px 0;
-  }
-  h2 {
-    font-size: 2.25em;
+  max-width: 960px;
+  margin: 50px 0;
+  width: 100%;
   }
 
-  h3,
-  h4 {
-      font-size: 1.875em;
+h2 {
+  font-size: 2.25em;
   }
 
-  p {
-      font-size: 1.125em;
-      line-height: 1.333;
+h3,
+h4 {
+  font-size: 1.875em;
+  }
+
+p {
+  font-size: 1.125em;
+  line-height: 1.333;
   }
 
 /* Header*/
 
 header {
   justify-content: center;
-
   }
+
 header .content-wrapper {
   justify-content: space-between;
   width: 100%;
   }
+
 header nav {
   width: 20%;
   justify-content: flex-end;
   font-size:.675em;
   }
+  
 header nav ul {
   justify-content: space-between;
   width: 50%;
   flex-basis:50%;
-}
-header figure { 
-    margin: 10px 0;
-    width: 30%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
   }
+
+header figure { 
+  margin: 10px 0;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  }
+
 .header-divider {
-    display: none;
-    }
+  display: none;
+  }
 
 /* Hero Area */
+
 .hero-area h1 {
   font-size: 3.75em;
   width: 80%;
-}
+  }
+
 /* Aside */
 
 aside .content-wrapper {
-  justify-content: space-around;
+  justify-content: space-between;
   }
 aside .content-wrapper .form-description, 
 aside .content-wrapper .form {
@@ -774,19 +823,20 @@ aside .content-wrapper .form {
 .features article {
   flex-basis: 33%;
   }
+
 .features h2 {
   width: 90%;
-}
+  }
 
 /* Reviews */
 
 .reviews article div {
   width: 42%;
   }
+
 .reviews h2 {
   padding-bottom: 50px;
   }
-
 
 /* Footer*/
 
@@ -794,16 +844,20 @@ footer .content-wrapper {
   width: 65%;
   margin: 100px 0;
   }
+
 .footer-content {
   display: flex;
   justify-content: space-between;
   }
+
 footer h4 {
   font-size: 1.875em;
   }
+
 .footer .contact {
   margin-bottom: 0;
   }
+
 .footer .copyright {
   width: 100%;
   }
@@ -813,12 +867,13 @@ About Page
  ========================================================================== */
 
 .mission h2,
-  .contact-section .content-wrapper h2 {
+.contact-section .content-wrapper h2 {
   width: 95%;
   font-size: 3em;
   }
+  
   .map figure {
-    padding-bottom: 40%; 
+  padding-bottom: 40%; 
   }
 
 .contact-content {
